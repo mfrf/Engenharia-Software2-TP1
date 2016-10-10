@@ -9,7 +9,6 @@ Projeto: https://github.com/jberkel/sms-backup-plus
 
 Documentação do programa: https://github.com/talesbarreto/Egenharia-Software2-TP1/blob/master/maindoc.md
 
-Documentação por JavaDoc: http://homepages.dcc.ufmg.br/~barreto/smsdoc/
 
 ## Outros links
 
