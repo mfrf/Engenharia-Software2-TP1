@@ -33,6 +33,7 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 
 * Mantenedores: SMS Backup+ é mantido pela equipe original de desenvolvedores, particularmente pelo usuário criador do projeto no GitHub, que também mantém o Aplicativo na Google Play. Além dessa equipe, diversos outros usuários no GitHub são responsáveis pela manutenção do código, como fica demonstrado pelo histórico de commits:
 
+![alt test] (https://github.com/talesbarreto/Egenharia-Software2-TP1/blob/master/Captura%20de%20Tela%202016-10-10%20a%CC%80s%2015.37.39.png "Commits ao longo do tempo")
 
 * Suporte: Consiste principalmente de voluntários, principalmente equipe do GitHub e os desenvolvedores da Equipe definida acima. Os erros podem ser inscritos no próprio GitHub, via "Issues". A própria comunidade do GitHUb se responsabiliza por resolver os problemas, analisando pull requests, fechando bugs, problemas no repositório, etc.
 
