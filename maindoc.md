@@ -15,7 +15,7 @@ SMS Backup+ pode ser encontrado gratuitamente na Google Play Store. Não há (e 
 #Table of Contents
 1. [Este documento](#este-documento)
 2. [Introdução](#introdução)
-3. [Atores Envolvidos]
+3. [Atores Envolvidos](#atores-envolvidos)
 4. [Funcionalidade do aplicativo](#funcionalidade-do-aplicativo)
 5. [Código](#código)
 
