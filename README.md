@@ -13,3 +13,7 @@ Documentação do programa: https://github.com/talesbarreto/Egenharia-Software2-
 ## Outros links
 
 Especificação do TP: http://www.dcc.ufmg.br/~mtov/es2/tp-ags-book.pdf
+
+
+## Pra tentar:
+Geraador de grafos automágicamente: https://github.com/janssk1/maven-graph-plugin/wiki/Manual
