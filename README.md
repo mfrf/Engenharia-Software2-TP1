@@ -15,7 +15,8 @@ Documentação automágica: http://homepages.dcc.ufmg.br/~barreto/smsdoc/
 Especificação do TP: http://www.dcc.ufmg.br/~mtov/es2/tp-ags-book.pdf
 
 * 6000 Plavras (Imagem = 200)
-## Organização esperada para cada capítulo (sistema):
+
+### Organização esperada para cada capítulo (sistema):
 * Descrição do sistema, incluindo principais features, objetivo, linguagem de
 programação.
 * Informações da equipe de desenvolvimento: principais desenvolvedores, funções na equipe (?)• Breve descrição da evolução do sistema: principais releases e novidades de cada uma.
