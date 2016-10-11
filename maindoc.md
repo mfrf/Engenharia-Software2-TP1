@@ -46,5 +46,6 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 ## Caso de uso
 
 ## Código
+### Principais frameworks, ferramentas e linguagens usadas no desenvolvimento.
 ### Arquitetura 
 ### Principais objetos
