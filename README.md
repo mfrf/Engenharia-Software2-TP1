@@ -7,6 +7,8 @@ Básico sobre Markdown: https://github.com/adam-p/markdown-here/wiki/Markdown-Ch
 
 Projeto: https://github.com/jberkel/sms-backup-plus
 
+Documentação automágica: http://homepages.dcc.ufmg.br/~barreto/smsdoc/
+
 Documentação do programa: https://github.com/talesbarreto/Egenharia-Software2-TP1/blob/master/maindoc.md
 
 
