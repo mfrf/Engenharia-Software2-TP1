@@ -12,13 +12,15 @@
 
 
 ## Este documento
-Este documento tem como objetivo documentar uma aplicação Java Open Source, no escopo do Trabalho Prático para a disciplina Engenharia de Software II. A aplicação escolhida foi a SMS Backup+, uma aplicação Moblile para realizar backup de SMS via contas Gmail.
+Este documento é um trabalho da disciplina Engenharia de Software ll, do [Departamento de Ciências da Computação](http://dcc.ufmg.br/dcc/) da [UFMG](https://www.ufmg.br). A proposta deste trabalho é desenvolver uma documentação de algum projeto OpenSource presente nos repositórios do GitHub. A aplicação escolhida foi o [SMS backup Plus](https://github.com/jberkel/sms-backup-plus), um aplicativo de backup de mensagens de smartphones android.
 
 ## Introdução
 
+Essa aplicação é um fork da aplicação SMS Backup, cujo desenvolvimento parou há algum tempo. SMS-Backup-Plus utiliza Gmail para realizar backup de SMS, MMS e Log de ligações, através da rede. O software pode ser encontrado para baixar no [Google Play](https://play.google.com/store/apps/details?id=com.zegoggles.smssync), a loja oficial da plataforma. O aplicativo possui suporte para as versões mais nova do sistema e ainda é relevante, já que o sistema da Google não oferece suporte para sincronia de mensagens SMS na nuvem.
+
 Essa aplicação é um fork da aplicação SMS Backup, cujo desenvolvimento parou há algum tempo. SMS-Backup-Plus utiliza Gmail para realizar backup de SMS, MMS e Log de ligações, através da rede.
 
-Difereças / Melhorias:
++Principais difereças e Melhorias:
 
 * Nova funcionalidade de restauração. SMS armazenados no Gmail pode ser transferidos de volta para o telefone. Essa funcionalidade permite até que usuários que já tenham criado um backup com versões mais antigas do SMS Backup migrem para a nova funcionalidade sem problemas. Entretanto, MMS de versões antigas ainda não podem ser restaurados.
 
@@ -61,7 +63,20 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 
 ## Caso de uso
 
++Realizar backups automáticos ou sob demanda de SMS, MMS e log de chamadas usando Gmail e Google Calendar. Além disso, permite que esses backups sejam restaurados para o telefone.
+
 ## Código
+
++<<<<<<< HEAD
+ +
+ +O código é escrito nos padrões de projetos Android. A linguagem Java é a usada para o desenvolvimento da parte lógica, enquanto a interface gráfica é descrita em linguagem XML:
+ +<p><img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/XML_interface.png"> 
+ +</p>
+ +O código usa as APIs e pacotes providos pelo Google para criação de aplicativos Android. Tipicamente, o desenvolvimento desse tipo de software é realizado em IDEs especializadas que pode ser uma versão modificada da [IDE Eclipse](https://www.eclipse.org/downloads/packages/eclipse-android-developers/neonm6) ou o [Android Studio](https://developer.android.com/studio/index.html), que pode ser visto na imagem acima.
+ +
+ +### Arquitetura 
+ +=======
+
 Abaixo iremos documentar de maneira breve a forma como o código fonte se estrutura e os principais frameworks, ferramentas e linguagens usadas no seu desenvolvimento.
 
 ### Arquitetura
@@ -81,6 +96,11 @@ O Maven baixa bibliotecas Java e seus plug-ins dinamicamente de um ou mais repos
 O Maven é construído utilizando uma arquitetura baseada em plugin, que permite que ele faça uso de qualquer aplicação controlável através da entrada padrão. Teoricamente, isto permitiria qualquer um escrever plugins para fazer interface com ferramentas de construção (compiladores, ferramentas de teste de unidade, etc.) para qualquer outra linguagem. De fato, o suporte e uso para linguagens diferentes de Java tem sido mínimas. Atualmente existe um plugin para o framework .NET e é mantido, e um plugin nativo C/C++ é mantido para o Maven 2.
 
 ### Principais módulos
+
++
+ +Os códigos são modularizados em pastas, nomeadas de acordo com suas funcionalidades implementadas. Apesar de todo o código estar inserido em apenas um pacote Java, a organização do diretório permite um bom entendimento a primeira vista. As principais pastas e suas breves descrições são descritas a seguir
+ +
+
 #### Activity
 Código responsável pela lógica da interface gráfica, tratando eventos de input do usuário e convocando os métodos correspondentes de cada funcionalidade apresentada nas opções de cada tela, que são basicamente três:
 <p>
