@@ -95,6 +95,12 @@ O Maven é construído utilizando uma arquitetura baseada em plugin, que permite
 
 ### Principais módulos
 
+<p>
+<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/cloves_arquitetura/prints_interface/uml.png" width="250">
+</p>
+
+Estrutura sequencial dos módulos.
+
 Os códigos são modularizados em pastas, nomeadas de acordo com suas funcionalidades implementadas. Apesar de todo o código estar inserido em apenas um pacote Java, a organização do diretório permite um bom entendimento a primeira vista. As principais pastas e suas breves descrições são descritas a seguir
 
 <p>
