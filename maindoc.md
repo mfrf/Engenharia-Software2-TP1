@@ -4,8 +4,8 @@
 (https://lh3.googleusercontent.com/O5XiRSakINV9UQjXEsrV_cadlCX_D8vf2eO614jWYnY-JJoteOqxel1Hj8A_K578lPk=w300-rw)
 
 #Table of Contents
-1. [Este documento](#este-documento)
-2. [Introdução](#introdução)
+1. [Introdução](#introdução)
+2. [Este documento](#este-documento)
 3. [Atores Envolvidos](#atores-envolvidos)
 4. [Funcionalidade do aplicativo](#funcionalidade-do-aplicativo)
 5. [Código](#código)
