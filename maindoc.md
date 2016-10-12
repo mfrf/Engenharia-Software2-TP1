@@ -10,23 +10,35 @@
 4. [Funcionalidade do aplicativo](#funcionalidade-do-aplicativo)
 5. [Código](#código)
 
+
+## Este documento
+Este documento tem como objetivo documentar uma aplicação Java Open Source, no escopo do Trabalho Prático para a disciplina Engenharia de Software II. A aplicação escolhida foi a SMS Backup+, uma aplicação Moblile para realizar backup de SMS via contas Gmail.
+
 ## Introdução
 
 Essa aplicação é um fork da aplicação SMS Backup, cujo desenvolvimento parou há algum tempo. SMS-Backup-Plus utiliza Gmail para realizar backup de SMS, MMS e Log de ligações, através da rede.
 
 Difereças / Melhorias:
 
-* Nova funcionalidade de restauração. SMS armazenados no Gmail pode ser transferidos de volta para o telefone. Essa funcionalidade permite até que usuários que já tenham criado um backup com versões mais antigas do SMS Backup. Entretanto, MMS ainda não podem ser restaurados.
+* Nova funcionalidade de restauração. SMS armazenados no Gmail pode ser transferidos de volta para o telefone. Essa funcionalidade permite até que usuários que já tenham criado um backup com versões mais antigas do SMS Backup migrem para a nova funcionalidade sem problemas. Entretanto, MMS de versões antigas ainda não podem ser restaurados.
 
 * SMS Backup+ nunca irá pedir pela senha do Gmail do usuário. SMS Backup+ utiliza XOAuth para ter acesso aos dados do usuário. Esse acesso pode ser revogado a qualquer momento.
 
-* SMS Backup+ pode ser encontrado gratuitamente na Google Play Store. Não há (e o desenvolvedor garante que não irá) uma versão pro ou paga. 
+* Suporte para Backup de MMS (desde a versão `1.1`), disponível apenas para Android 2.x
 
-## Este documento
+* Backup de Log de ligações (desde a versão `1.2`), com integração com Google Calendário (desde a versão `1.3.`) e restauração (desde `1.4`).
+
+* Batch size limits removed.
+
+* Funciona com qualquer servidor IMAP (mas com Gmail como default).
+
+Testado com Android 2.x - 6.0.x.
+
+* SMS Backup+ pode ser encontrado gratuitamente na Google Play Store. Não há (e o desenvolvedor garante que não irá) uma versão pro ou paga. 
 
 ## Atores Envolvidos
 
-Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo, graças a muitos atores envolvidos no projeto:
+Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo, graças a diversos atores envolvidos no projeto:
 
 * Desenvolvedores: Consistem principalmente em membros da comunidade do GitHub, mas teoricamente, o código é aberto para que qualquer usuário com conta no GitHub (não necessariamente membro da comunidade) possa dar commits.Os principais Desenvolvedores são:
 
@@ -50,11 +62,24 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 ## Caso de uso
 
 ## Código
+Abaixo iremos documentar de maneira breve a forma como o código fonte se estrutura e os principais frameworks, ferramentas e linguagens usadas no seu desenvolvimento.
 
-A aplicação é toda desenvolvida em Java, seguindo os preceitos de Modularização, mas sem utilizar Pacotes. A aplicação possui um diretório de testes com testes unitários e de sistema.
+### Arquitetura
 
-### Principais frameworks, ferramentas e linguagens usadas no desenvolvimento.
-### Arquitetura 
+A aplicação é toda desenvolvida em Java, utilizando a tecnologia de Gerenciamento de Builds Apache Maven. Por seguir o Maven, a aplicação é estruturada em módulos bem definidos. A Arquietura do projeto adota a lógica arquitetural Apache Maven: aplicação dividida em módulos e submódulos organizados pela lógica de diretórios parents e childrens.
+
+![imagem3](https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/maven-1-249x300.png "Exemplo arquietura Maven")
+Exemplo de como uma Arquitetura Apache Maven se estrutura
+
+Cada módulo controla alguma funcionalidade ou recurso da aplicação. O código fonte é separado dos recursos bem como os testes são separados de ambos. O build é realizado por um POM "Project Object Model", uma representação xml do projeto Maven, contendo todos os módulos, recursos, plugins e passos para executar o build.
+
+####Sobre Arquitetura Maven
+O Maven utiliza um arquivo XML (POM) para descrever o projeto de software sendo construído, suas dependências sobre módulos e componentes externos, a ordem de compilação, diretórios e plug-ins necessários. Ele vem com objetivos pré-definidos para realizar certas tarefas bem definidas como compilação de código e seu empacotamento.
+
+O Maven baixa bibliotecas Java e seus plug-ins dinamicamente de um ou mais repositórios, como o Maven 2 Central Repository, e armazena-os em uma área de cache local.[2] Este cache local de artefatos baixados pode também ser atualizado com artefatos criados por projetos locais. Repositórios públicos podem também ser atualizados.
+
+O Maven é construído utilizando uma arquitetura baseada em plugin, que permite que ele faça uso de qualquer aplicação controlável através da entrada padrão. Teoricamente, isto permitiria qualquer um escrever plugins para fazer interface com ferramentas de construção (compiladores, ferramentas de teste de unidade, etc.) para qualquer outra linguagem. De fato, o suporte e uso para linguagens diferentes de Java tem sido mínimas. Atualmente existe um plugin para o framework .NET e é mantido, e um plugin nativo C/C++ é mantido para o Maven 2.
+
 ### Principais módulos
 #### Activity
 Código responsável pela lógica da interface gráfica, tratando eventos de input do usuário e convocando os métodos correspondentes de cada funcionalidade apresentada nas opções de cada tela, que são basicamente três:
