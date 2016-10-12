@@ -20,7 +20,7 @@ Essa aplicação é um fork da aplicação SMS Backup, cujo desenvolvimento paro
 
 Essa aplicação é um fork da aplicação SMS Backup, cujo desenvolvimento parou há algum tempo. SMS-Backup-Plus utiliza Gmail para realizar backup de SMS, MMS e Log de ligações, através da rede.
 
-+Principais difereças e Melhorias:
+###Principais difereças e Melhorias:
 
 * Nova funcionalidade de restauração. SMS armazenados no Gmail pode ser transferidos de volta para o telefone. Essa funcionalidade permite até que usuários que já tenham criado um backup com versões mais antigas do SMS Backup migrem para a nova funcionalidade sem problemas. Entretanto, MMS de versões antigas ainda não podem ser restaurados.
 
@@ -67,15 +67,13 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 
 ## Código
 
-+<<<<<<< HEAD
- +
- +O código é escrito nos padrões de projetos Android. A linguagem Java é a usada para o desenvolvimento da parte lógica, enquanto a interface gráfica é descrita em linguagem XML:
- +<p><img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/XML_interface.png"> 
- +</p>
- +O código usa as APIs e pacotes providos pelo Google para criação de aplicativos Android. Tipicamente, o desenvolvimento desse tipo de software é realizado em IDEs especializadas que pode ser uma versão modificada da [IDE Eclipse](https://www.eclipse.org/downloads/packages/eclipse-android-developers/neonm6) ou o [Android Studio](https://developer.android.com/studio/index.html), que pode ser visto na imagem acima.
- +
- +### Arquitetura 
- +=======
+O código é escrito nos padrões de projetos Android. A linguagem Java é a usada para o desenvolvimento da parte lógica, enquanto a interface gráfica é descrita em linguagem XML:
+ <p><img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/XML_interface.png"> 
+ </p>
+ O código usa as APIs e pacotes providos pelo Google para criação de aplicativos Android. Tipicamente, o desenvolvimento desse tipo de software é realizado em IDEs especializadas que pode ser uma versão modificada da [IDE Eclipse](https://www.eclipse.org/downloads/packages/eclipse-android-developers/neonm6) ou o [Android Studio](https://developer.android.com/studio/index.html), que pode ser visto na imagem acima.
+
+### Arquitetura 
+
 
 Abaixo iremos documentar de maneira breve a forma como o código fonte se estrutura e os principais frameworks, ferramentas e linguagens usadas no seu desenvolvimento.
 
@@ -97,9 +95,7 @@ O Maven é construído utilizando uma arquitetura baseada em plugin, que permite
 
 ### Principais módulos
 
-+
- +Os códigos são modularizados em pastas, nomeadas de acordo com suas funcionalidades implementadas. Apesar de todo o código estar inserido em apenas um pacote Java, a organização do diretório permite um bom entendimento a primeira vista. As principais pastas e suas breves descrições são descritas a seguir
- +
+Os códigos são modularizados em pastas, nomeadas de acordo com suas funcionalidades implementadas. Apesar de todo o código estar inserido em apenas um pacote Java, a organização do diretório permite um bom entendimento a primeira vista. As principais pastas e suas breves descrições são descritas a seguir
 
 #### Activity
 Código responsável pela lógica da interface gráfica, tratando eventos de input do usuário e convocando os métodos correspondentes de cada funcionalidade apresentada nas opções de cada tela, que são basicamente três:
