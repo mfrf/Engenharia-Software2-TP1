@@ -62,13 +62,23 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 ## Caso de uso
 
 ## Código
+Abaixo iremos documentar de maneira breve a forma como o código fonte se estrutura e os principais frameworks, ferramentas e linguagens usadas no seu desenvolvimento.
 
-A aplicação é toda desenvolvida em Java, seguindo os preceitos de Modularização, mas sem utilizar Pacotes. A aplicação possui um diretório de testes com testes unitários e de sistema.
-
-### Principais frameworks, ferramentas e linguagens usadas no desenvolvimento.
 ### Arquitetura
 
+A aplicação é toda desenvolvida em Java, utilizando a tecnologia de Gerenciamento de Builds Apache Maven. Por seguir o Maven, a aplicação é estruturada em módulos bem definidos. A Arquietura do projeto adota a lógica arquitetural Apache Maven: aplicação dividida em módulos e submódulos organizados pela lógica de diretórios parents e childrens.
 
+![imagem3](https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/maven-1-249x300.png "Exemplo arquietura Maven")
+Exemplo de como uma Arquitetura Apache Maven se estrutura
+
+Cada módulo controla alguma funcionalidade ou recurso da aplicação. O código fonte é separado dos recursos bem como os testes são separados de ambos. O build é realizado por um POM "Project Object Model", uma representação xml do projeto Maven, contendo todos os módulos, recursos, plugins e passos para executar o build.
+
+####Sobre Arquitetura Maven
+O Maven utiliza um arquivo XML (POM) para descrever o projeto de software sendo construído, suas dependências sobre módulos e componentes externos, a ordem de compilação, diretórios e plug-ins necessários. Ele vem com objetivos pré-definidos para realizar certas tarefas bem definidas como compilação de código e seu empacotamento.
+
+O Maven baixa bibliotecas Java e seus plug-ins dinamicamente de um ou mais repositórios, como o Maven 2 Central Repository, e armazena-os em uma área de cache local.[2] Este cache local de artefatos baixados pode também ser atualizado com artefatos criados por projetos locais. Repositórios públicos podem também ser atualizados.
+
+O Maven é construído utilizando uma arquitetura baseada em plugin, que permite que ele faça uso de qualquer aplicação controlável através da entrada padrão. Teoricamente, isto permitiria qualquer um escrever plugins para fazer interface com ferramentas de construção (compiladores, ferramentas de teste de unidade, etc.) para qualquer outra linguagem. De fato, o suporte e uso para linguagens diferentes de Java tem sido mínimas. Atualmente existe um plugin para o framework .NET e é mantido, e um plugin nativo C/C++ é mantido para o Maven 2.
 
 ### Principais módulos
 #### Activity
