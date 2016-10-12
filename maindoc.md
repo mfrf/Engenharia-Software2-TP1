@@ -97,6 +97,12 @@ O Maven é construído utilizando uma arquitetura baseada em plugin, que permite
 
 Os códigos são modularizados em pastas, nomeadas de acordo com suas funcionalidades implementadas. Apesar de todo o código estar inserido em apenas um pacote Java, a organização do diretório permite um bom entendimento a primeira vista. As principais pastas e suas breves descrições são descritas a seguir
 
+<p>
+<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/EstruturaSMSBakcup.png" width="250">
+</p>
+
+Estrutura de pastas do código fonte.
+
 #### Activity
 Código responsável pela lógica da interface gráfica, tratando eventos de input do usuário e convocando os métodos correspondentes de cada funcionalidade apresentada nas opções de cada tela, que são basicamente três:
 <p>
