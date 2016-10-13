@@ -136,7 +136,8 @@ Este é o código responsável por implementar o serviço do sistema. Diferentem
 Estes dois módulos implementam códigos auxiliares, que não são interesses funcionais do aplicativo. Nele, há métodos relativo à co-rotinas e thread pool, por exemplo.
 
 ## Conclusão
-O SMS-Backup-Plus, apesar de ser um fork de outr aplicação semelhante, possuí caracteristicas de projeto muito interressantes.
+O SMS-Backup-Plus, apesar de ser um fork de outra aplicação semelhante, possuí caracteristicas de projeto bem interressantes.
+Primeiramente devemos notar o fato sobre o desenvolvimento ser realizado por poucas pessoas e, a grande maioria dos commits serem realizados pelo mesmo usuário. Isso mostra como este sistema, por mais que seja popular, não atraí muitos intusiastas para seu desenvolvimento.
 
 
 ## Referências
