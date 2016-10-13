@@ -9,6 +9,8 @@
 3. [Atores Envolvidos](#atores-envolvidos)
 4. [Funcionalidade do aplicativo](#funcionalidade-do-aplicativo)
 5. [Código](#código)
+6. [Conclusão](#conclusão)
+7. [Referências](#referências)
 
 
 ## Este documento
@@ -134,6 +136,8 @@ Este é o código responsável por implementar o serviço do sistema. Diferentem
 Estes dois módulos implementam códigos auxiliares, que não são interesses funcionais do aplicativo. Nele, há métodos relativo à co-rotinas e thread pool, por exemplo.
 
 ## Conclusão
+
+
 
 ## Referências
 
