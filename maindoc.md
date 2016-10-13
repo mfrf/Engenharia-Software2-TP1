@@ -136,11 +136,15 @@ Este é o código responsável por implementar o serviço do sistema. Diferentem
 Estes dois módulos implementam códigos auxiliares, que não são interesses funcionais do aplicativo. Nele, há métodos relativo à co-rotinas e thread pool, por exemplo.
 
 ## Conclusão
-O SMS-Backup-Plus, apesar de ser um fork de outra aplicação semelhante, possuí características de projeto bem interessantes. 
+O SMS Backup Plus, apesar de ser um fork de outra aplicação semelhante, possuí características de projeto bem interessantes. 
 
 Primeiramente devemos notar o fato sobre o desenvolvimento ser realizado por poucas pessoas e, a grande maioria dos commits serem realizados pelo mesmo usuário. Isso mostra como este sistema, por mais que seja popular, não atraí muitos entusiastas para seu desenvolvimento. Cremos que isso se deve a própria arquitetura do sistema que não agrada aos desenvolvedores ou o próprio objetivo do sistema não mostra relevância para os mesmos. 
 
 A arquitetura do sistema está bem definida. Vimos como as interfaces gráficas foram definidas através de XML e a estrutura lógica em Java. Além, citamos a utilização de tecnologia de Gerenciamento de Builds Apache Maven que permitiu que os módulos controlassem apenas a sua própria funcionalidade.
+
+Vimos, também, a modularização do sistema que está bem independente entre si. Isso ajudou com a própria compreensão do sistema. 
+
+Concluímos que, apesar de ser um sistema relativamente pequeno, o mesmo possuí uma estrutura arquitetural muito bem definida e robusta. Isto, certamente irá ajudar em casos de expansão bruta do sistema.
 
 ## Referências
 
