@@ -151,3 +151,5 @@ Concluímos que, apesar de ser um sistema relativamente pequeno, o mesmo possuí
 1. jberkel/sms-backup-plus: Backup Android SMS, MMS and call log to Gmail / Gcal / IMAP - [https://github.com/jberkel/sms-backup-plus](https://github.com/jberkel/sms-backup-plus) - Acesso em Outubro de 2016.
 
 2. Maven – Apache Maven IDE Integration - [https://maven.apache.org/ide.html](https://maven.apache.org/ide.html) - Acesso em Outubro de 2016.
+
+3. Maven – Introduction to the POM - [https://maven.apache.org/guides/introduction/introduction-to-the-pom.html](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) - Acesso em Outubro de 2016.
