@@ -9,6 +9,8 @@
 3. [Atores Envolvidos](#atores-envolvidos)
 4. [Funcionalidade do aplicativo](#funcionalidade-do-aplicativo)
 5. [Código](#código)
+6. [Conclusão](#conclusão)
+7. [Referências](#referências)
 
 
 ## Este documento
@@ -132,3 +134,24 @@ Este é o código responsável por implementar o serviço do sistema. Diferentem
 
 #### tasks e utils
 Estes dois módulos implementam códigos auxiliares, que não são interesses funcionais do aplicativo. Nele, há métodos relativo à co-rotinas e thread pool, por exemplo.
+
+## Conclusão
+O SMS Backup Plus, apesar de ser um fork de outra aplicação semelhante, possuí características de projeto bem interessantes. 
+
+Primeiramente devemos notar o fato sobre o desenvolvimento ser realizado por poucas pessoas e, a grande maioria dos commits serem realizados pelo mesmo usuário. Isso mostra como este sistema, por mais que seja popular, não atraí muitos entusiastas para seu desenvolvimento. Cremos que isso se deve a própria arquitetura do sistema que não agrada aos desenvolvedores ou o próprio objetivo do sistema não mostra relevância para os mesmos. 
+
+A arquitetura do sistema está bem definida. Vimos como as interfaces gráficas foram definidas através de XML e a estrutura lógica em Java. Além, citamos a utilização de tecnologia de Gerenciamento de Builds Apache Maven que permitiu que os módulos controlassem apenas a sua própria funcionalidade.
+
+Vimos, também, a modularização do sistema que está bem independente entre si. Isso ajudou com a própria compreensão do sistema. 
+
+Concluímos que, apesar de ser um sistema relativamente pequeno, o mesmo possuí uma estrutura arquitetural muito bem definida e robusta. Isto, certamente irá ajudar em casos de expansão bruta do sistema.
+
+## Referências
+
+1. jberkel/sms-backup-plus: Backup Android SMS, MMS and call log to Gmail / Gcal / IMAP - [https://github.com/jberkel/sms-backup-plus](https://github.com/jberkel/sms-backup-plus) - Acesso em Outubro de 2016.
+
+2. Maven – Apache Maven IDE Integration - [https://maven.apache.org/ide.html](https://maven.apache.org/ide.html) - Acesso em Outubro de 2016.
+
+3. Maven – Introduction to the POM - [https://maven.apache.org/guides/introduction/introduction-to-the-pom.html](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) - Acesso em Outubro de 2016.
+
+4. Using OAuth 2.0 for Client-side Web Applications &nbsp;|&nbsp; Google Identity Platform &nbsp;|&nbsp; Google Developers - [https://developers.google.com/identity/protocols/OAuth2UserAgent](https://developers.google.com/identity/protocols/OAuth2UserAgent) - Acesso em Outubro de 2016.
