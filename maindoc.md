@@ -148,3 +148,4 @@ Concluímos que, apesar de ser um sistema relativamente pequeno, o mesmo possuí
 
 ## Referências
 
+1. jberkel/sms-backup-plus: Backup Android SMS, MMS and call log to Gmail / Gcal / IMAP - [https://github.com/jberkel/sms-backup-plus](https://github.com/jberkel/sms-backup-plus) - Acesso em Outubro de 2016.
