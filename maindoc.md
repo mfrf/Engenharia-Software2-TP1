@@ -153,3 +153,5 @@ Concluímos que, apesar de ser um sistema relativamente pequeno, o mesmo possuí
 2. Maven – Apache Maven IDE Integration - [https://maven.apache.org/ide.html](https://maven.apache.org/ide.html) - Acesso em Outubro de 2016.
 
 3. Maven – Introduction to the POM - [https://maven.apache.org/guides/introduction/introduction-to-the-pom.html](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) - Acesso em Outubro de 2016.
+
+4. Using OAuth 2.0 for Client-side Web Applications &nbsp;|&nbsp; Google Identity Platform &nbsp;|&nbsp; Google Developers - [https://developers.google.com/identity/protocols/OAuth2UserAgent](https://developers.google.com/identity/protocols/OAuth2UserAgent) - Acesso em Outubro de 2016.
