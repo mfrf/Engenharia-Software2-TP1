@@ -132,3 +132,5 @@ Este é o código responsável por implementar o serviço do sistema. Diferentem
 
 #### tasks e utils
 Estes dois módulos implementam códigos auxiliares, que não são interesses funcionais do aplicativo. Nele, há métodos relativo à co-rotinas e thread pool, por exemplo.
+
+## Conclusão
