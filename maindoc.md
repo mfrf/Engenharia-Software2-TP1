@@ -137,7 +137,7 @@ Estes dois módulos implementam códigos auxiliares, que não são interesses fu
 
 ## Conclusão
 O SMS-Backup-Plus, apesar de ser um fork de outra aplicação semelhante, possuí caracteristicas de projeto bem interressantes.
-Primeiramente devemos notar o fato sobre o desenvolvimento ser realizado por poucas pessoas e, a grande maioria dos commits serem realizados pelo mesmo usuário. Isso mostra como este sistema, por mais que seja popular, não atraí muitos intusiastas para seu desenvolvimento.
+Primeiramente devemos notar o fato sobre o desenvolvimento ser realizado por poucas pessoas e, a grande maioria dos commits serem realizados pelo mesmo usuário. Isso mostra como este sistema, por mais que seja popular, não atraí muitos intusiastas para seu desenvolvimento. Cremos que isso se deve a propria arquitetura do sistema que não agrada aos desenvolvedores ou o próprio objetivo do sistema não mostra relevancia para os mesmos.
 
 
 ## Referências
