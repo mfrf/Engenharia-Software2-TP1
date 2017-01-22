@@ -1,13 +1,15 @@
 # Revisisão:
 * "poderiam ter incluído um pouco mais de conteúdo para a introdução. Poderia haver mais detalhes da descrição do aplicativo, sua contextualização, aplicabilidade, benefícios de uso e requisitos."
 * "necessidade de descrição da evolução da ferramenta, indicando tempo entre releases, correção de bugs, atendimento à issues."
-* [DONE-Tales]"não fica claro quais são os principais frameworks"
+* "não fica claro quais são os principais frameworks"
+ * Feito: Tales
 * "não deixam claro, para um possível colaborador, o que é necessário para configurar ou o que deve ser instalado para que ele possa colaborar com o projeto."
 * precisa conter mais detalhes sobre as principais decisões de desenvolvimento"
 * "indicar possíveis casos de uso desenvolvedor e primeiros passo para os usuários."
 * "É sugerido uma revisão da estrutura e relações indicadas na figura Estrutura sequencial dos módulos."
 
 * "a apresentação do logotipo do programa encontra-se com o link/arquivo quebrado, impossibilitando sua visualização."
+ * Não. Não está.
 * "Embora o desenvolvedores tenham mencionado que testes foram feitos até a versão 6.0.X do Android, a documentação não aborda esse fato," [...]"quando o ideal seria informar até qual versão é efetivamente suportada."
 * "A documentação não aborda alguns dos problemas essenciais, mais diretamente ligados a conformidade e changeability da aplicação."
 * "de avaliações do aplicativo na Google Play darem a entender que muitas das funcionalidades não estão aprimoradas ou possuem bugs não corrigidos e que os testes não foram efetuados em massa com a comunidade até mesmo através de versões beta"
