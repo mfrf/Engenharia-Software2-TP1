@@ -3,14 +3,14 @@
   * Vou tentar fazer essa disgraça. Tomar no Cu - Paulo
 * "necessidade de descrição da evolução da ferramenta, indicando tempo entre releases, correção de bugs, atendimento à issues."
 * "não fica claro quais são os principais frameworks"
- * Feito: Tales
+ * Feito - Tales
 * "não deixam claro, para um possível colaborador, o que é necessário para configurar ou o que deve ser instalado para que ele possa colaborar com o projeto."
 * precisa conter mais detalhes sobre as principais decisões de desenvolvimento"
 * "indicar possíveis casos de uso desenvolvedor e primeiros passo para os usuários."
 * "É sugerido uma revisão da estrutura e relações indicadas na figura Estrutura sequencial dos módulos."
 
 * "a apresentação do logotipo do programa encontra-se com o link/arquivo quebrado, impossibilitando sua visualização."
- * Não. Não está.
+ * Não. Não está. - Tales
 * "Embora o desenvolvedores tenham mencionado que testes foram feitos até a versão 6.0.X do Android, a documentação não aborda esse fato," [...]"quando o ideal seria informar até qual versão é efetivamente suportada."
 * "A documentação não aborda alguns dos problemas essenciais, mais diretamente ligados a conformidade e changeability da aplicação."
 * "de avaliações do aplicativo na Google Play darem a entender que muitas das funcionalidades não estão aprimoradas ou possuem bugs não corrigidos e que os testes não foram efetuados em massa com a comunidade até mesmo através de versões beta"
@@ -20,6 +20,7 @@
   * "Outro problema é a limitação na restauração de mensagens e a retirada do suporte à restauração de MMS, que depende de patches e não possui suporte do emulador do Google, documentação incompleta e dependência do provedor de telefonia."
 * "Alguns módulos não possuem exemplos de código ou apresentação gráfica da estrutura (diagramas de classe), apenas limitando-se a explicar para que servem. São eles: Auth, Calendar, Contacts, Mail, Receiver, Service, Tasks e Utils."
 * "A documentação é voltada para explicar o projeto para um desenvolvedor, para isso, considera-se interessante haver um tópico específico para listar e explicar, se não todas, as principais funcionalidades das APIs do Google que são usadas no desenvolvimento do aplicativo."
+ * Não tem APIs do Google neste projeto - Tales
 
 
 # Egenharia-Software2-TP1
