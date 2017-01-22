@@ -1,5 +1,6 @@
-# Revisisão:
+# Revisão:
 * "poderiam ter incluído um pouco mais de conteúdo para a introdução. Poderia haver mais detalhes da descrição do aplicativo, sua contextualização, aplicabilidade, benefícios de uso e requisitos."
+  Vou tentar fazer essa disgraça. Tomar no Cu.
 * "necessidade de descrição da evolução da ferramenta, indicando tempo entre releases, correção de bugs, atendimento à issues."
 * "não fica claro quais são os principais frameworks"
  * Feito: Tales
