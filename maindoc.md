@@ -1,4 +1,4 @@
-# Documentação de sms-backup-plus <h1>
+# Documentação de sms-backup-plus<h1>
 
 ![Logo do programa]
 (https://lh3.googleusercontent.com/O5XiRSakINV9UQjXEsrV_cadlCX_D8vf2eO614jWYnY-JJoteOqxel1Hj8A_K578lPk=w300-rw)
@@ -50,11 +50,11 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 + [marcher233](https://github.com/marcher233) -> segundo em contribuição, mas com apenas 10 commits. Provavelmente é um membro da comunidade GitHub do APP.
 
 * Usuários: Consistem principalmente de usuários de celulares Android que desejam fazer backup de suas mensagens SMS. A página do App no Google Play conta com mais de 50 milhões de instalações e 4.4 estrelas, avaliado por  56,206 usuários. Os usuários não necessariamente possuem um conhecimento grande de computação ou Android para utilizar o Aplicativo. Abaixo um snapshot da página do aplicativo no Google Drive, com as informações de uso:
-![imagem1](https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/analiseSMSBackup.png "Dados GooglePlay")
+![imagem1](https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/analiseSMSBackup.png?raw=true "Dados GooglePlay")
 
 * Mantenedores: SMS Backup+ não possui uma equipe de desenvolvedores ou de mantenedores per si, o que há é o Desenvolvedor da aplicação jberkel, que a mantém tanto no GitHub quanto na GooglePlay. Entretanto, por ser Open Source, a aplicação conta com diversos colaboradores (40 no total até o momento) no GitHub, que se preocupam com resolver as Issues e alterar partes do código que possam estar defeituosas. Mas todos os pull requests passam pelo crivo do Desenvolvedor. Abaixo um snapshot do histórico de commits da aplicação:
 
-![imagem2] (https://github.com/talesbarreto/Egenharia-Software2-TP1/blob/master/Captura%20de%20Tela%202016-10-10%20a%CC%80s%2015.37.39.png "Commits ao longo do tempo")
+![imagem2] (https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/Captura%20de%20Tela%202016-10-10%20a%CC%80s%2015.37.39.png?raw=true "Commits ao longo do tempo")
 
 * Suporte: Consiste principalmente de voluntários, principalmente equipe do GitHub e os desenvolvedores da Equipe definida acima. Os erros podem ser inscritos no próprio GitHub, via "Issues". A própria comunidade do GitHUb se responsabiliza por resolver os problemas, analisando pull requests, fechando bugs, problemas no repositório, etc.
 
@@ -63,15 +63,59 @@ Por ser um projeto open source, Android Backup+ evoluiu muito ao longo doe tempo
 ## Código
 
 O código é escrito nos padrões de projetos Android. A linguagem Java é a usada para o desenvolvimento da parte lógica, enquanto a interface gráfica é descrita em linguagem XML:
- <p><img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/XML_interface.png"> 
+ <p><img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/XML_interface.png?raw=true"> 
  </p>
  O código usa as APIs e pacotes providos pelo Google para criação de aplicativos Android. Tipicamente, o desenvolvimento desse tipo de software é realizado em IDEs especializadas que pode ser uma versão modificada da [IDE Eclipse](https://www.eclipse.org/downloads/packages/eclipse-android-developers/neonm6) ou o [Android Studio](https://developer.android.com/studio/index.html), que pode ser visto na imagem acima.
 
-### Arquitetura
+### Principais frameworks e bibliotecas externas
 
+#### Otto
+
+[Otto](http://square.github.io/otto/) oferece um barramento simplificado para a plicação. Com ele, é possível realizar comunicação direta entre diferentes componentes. Com registradores e listeners, Otto implementa, por padrão, troca de mensagens assíncronas sem a necessidade de espera ocupada.
+
+O código é muito simples. Para utiliza-lo, basta instanciá-lo:
+```java
+Bus bus = new Bus();
+```
+Cria um listener para receber mensagens:
+
+```java
+@Produce public AnswerAvailableEvent produceAnswer() {
+    // Assuming 'lastAnswer' exists.
+    return new AnswerAvailableEvent(this.lastAnswer);
+}
+```
+Enviar mensagens:
+```java
+bus.post(new AnswerAvailableEvent(42));
+```
+
+Otto está sob a [licença Apache](http://www.apache.org/licenses/LICENSE-2.0) e o código fonte pode ser encontrado no [Github](https://github.com/square/otto).
+
+#### Pay-me
+
+Pay-me é uma biblioteca para Android com a finalidade de oferecer códigos bem testados e estabelecidos na comunidade para prover uma forma segura e padronizada do usuário oferecer doações para o desenvolvedor. 
+O código está disponível no [Github](https://github.com/jberkel/pay-me) sob a [licença Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+#### JSON-Java
+
+[JSON-Java](https://github.com/stleary/JSON-java) é uma biblioteca que permite a implementação e interpretação de códigos JSON, XML. HTTP, Cookies  e CDL em Java. A biblioteca é usada para estruturar e ler o banco de dados de backups.
+O código está disponível no [Github](https://github.com/stleary/JSON-java) 
+
+#### Signpost
+O Signpost é a solução fácil e intuitiva para assinar mensagens HTTP na plataforma Java de acordo com o padrão   OAuth Core 1.0a. O Signpost segue um design modular e flexível, permitindo combiná-lo com diferentes camadas de mensagens HTTP. 
+
+O padrão [OAuth Core 1.0a](https://oauth.net/core/1.0a/) permite que o usuário se autentique em serviços externos ao aplicativo para que este use seus recursos. A biblioteca é usada para que o aplicativo armazene as informações de backup na conta de e-mail do usuário.
+
+#### jetbrains.annotations.Nullable
+
+Esta biblioteca é usada para prover uma gerencia de exceções de acessos nulos, muitas vezes tratando alguns automaticamente. A biblioteca foi criada por [JetBrains](https://www.jetbrains.com/help/idea/2016.2/nullable-and-notnull-annotations.html) e sua documentação pode ser acessada no [site da empresa](https://www.jetbrains.com/help/idea/2016.3/nullable-and-notnull-annotations.html).
+
+
+### Arquitetura
 A aplicação é toda desenvolvida em Java, utilizando a tecnologia de Gerenciamento de Builds Apache Maven. Por seguir o Maven, a aplicação é estruturada em módulos bem definidos. A Arquietura do projeto adota a lógica arquitetural Apache Maven: aplicação dividida em módulos e submódulos organizados pela lógica de diretórios parents e childrens.
 
-![imagem3](https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/maven-1-249x300.png "Exemplo arquietura Maven")
+![imagem3](https://raw.githubusercontent.com/talesbarreto/Engenharia-Software2-TP1/master/prints_interface/maven-1-249x300.png "Exemplo arquietura Maven")
 Exemplo de como uma Arquitetura Apache Maven se estrutura
 
 Cada módulo controla alguma funcionalidade ou recurso da aplicação. O código fonte é separado dos recursos bem como os testes são separados de ambos. O build é realizado por um POM "Project Object Model", uma representação xml do projeto Maven, contendo todos os módulos, recursos, plugins e passos para executar o build.
@@ -86,7 +130,7 @@ O Maven é construído utilizando uma arquitetura baseada em plugin, que permite
 ### Principais módulos
 
 <p>
-<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/cloves_arquitetura/prints_interface/uml.png">
+<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/cloves_arquitetura/prints_interface/uml.png?raw=true">
 </p>
 
 Estrutura sequencial dos módulos.
@@ -94,7 +138,7 @@ Estrutura sequencial dos módulos.
 Os códigos são modularizados em pastas, nomeadas de acordo com suas funcionalidades implementadas. Apesar de todo o código estar inserido em apenas um pacote Java, a organização do diretório permite um bom entendimento a primeira vista. As principais pastas e suas breves descrições são descritas a seguir
 
 <p>
-<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/EstruturaSMSBakcup.png">
+<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/EstruturaSMSBakcup.png?raw=true">
 </p>
 
 Estrutura de pastas do código fonte.
@@ -102,9 +146,9 @@ Estrutura de pastas do código fonte.
 #### Activity
 Código responsável pela lógica da interface gráfica, tratando eventos de input do usuário e convocando os métodos correspondentes de cada funcionalidade apresentada nas opções de cada tela, que são basicamente três:
 <p>
-<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Screenshot_20161012-103446.png"  width="250"> 
-<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Screenshot_20161012-103533.png"  width="250"> 
-<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Screenshot_20161012-103554.png"  width="250"> 
+<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Screenshot_20161012-103446.png?raw=true"  width="250"> 
+<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Screenshot_20161012-103533.png?raw=true"  width="250"> 
+<img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Screenshot_20161012-103554.png?raw=true"  width="250"> 
 </p>
 A interface gráfica do aplicativo não é sofisticada, já que sua funcionalidade não é interativa. Apenas há recursos de backup sob demanda e configurações de backups automáticos.
 
@@ -123,7 +167,7 @@ Este é um dos módulos mais importantes do programa. Ele acessa a conta de e-ma
 
 #### Preferences
 Este é o código responsável pela lógica da gerencia de configurações disponibilizadas para o usuário, através da interface gráfica do sistema. Cada configuração pertence à uma classe distinta e há uma classe específica para definir as configurações padrões do sistema:
-<p><img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Classe-defaults.png"> 
+<p><img src="https://github.com/talesbarreto/Engenharia-Software2-TP1/blob/master/prints_interface/Classe-defaults.png?raw=true"> 
 </p>
 
 #### Receiver
