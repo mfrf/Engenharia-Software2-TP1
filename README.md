@@ -1,8 +1,8 @@
 # Revisisão:
 * "poderiam ter incluído um pouco mais de conteúdo para a introdução. Poderia haver mais detalhes da descrição do aplicativo, sua contextualização, aplicabilidade, benefícios de uso e requisitos."
 * "necessidade de descrição da evolução da ferramenta, indicando tempo entre releases, correção de bugs, atendimento à issues."
-* "não fica claro quais são os principais frameworks"
-* não deixam claro, para um possível colaborador, o que é necessário para configurar ou o que deve ser instalado para que ele possa colaborar com o projeto."
+* [DONE-Tales]"não fica claro quais são os principais frameworks"
+* "não deixam claro, para um possível colaborador, o que é necessário para configurar ou o que deve ser instalado para que ele possa colaborar com o projeto."
 * precisa conter mais detalhes sobre as principais decisões de desenvolvimento"
 * "indicar possíveis casos de uso desenvolvedor e primeiros passo para os usuários."
 * "É sugerido uma revisão da estrutura e relações indicadas na figura Estrutura sequencial dos módulos."
