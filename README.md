@@ -2,7 +2,7 @@
 * ~~"poderiam ter incluído um pouco mais de conteúdo para a introdução. Poderia haver mais detalhes da descrição do aplicativo, sua contextualização, aplicabilidade, benefícios de uso e requisitos."~~
   * **Vou tentar fazer essa disgraça. Tomar no Cu - Paulo**
 * ~~"necessidade de descrição da evolução da ferramenta, indicando tempo entre releases, correção de bugs, atendimento à issues."~~
- * **Fazendo -Tales**
+ * **Feito -Tales**
 * ~~"não fica claro quais são os principais frameworks"~~
  * **Feito - Tales**
 * "não deixam claro, para um possível colaborador, o que é necessário para configurar ou o que deve ser instalado para que ele possa colaborar com o projeto."
